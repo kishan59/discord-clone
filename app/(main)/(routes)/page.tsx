@@ -7,7 +7,7 @@ export default function Home() {
     <div >
       <UserButton />
       <ModeToggle />
-      
+
     </div>
   );
 }
