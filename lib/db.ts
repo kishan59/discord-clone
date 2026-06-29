@@ -1,4 +1,3 @@
-import "dotenv/config";
 import { PrismaMariaDb } from "@prisma/adapter-mariadb";
 import { PrismaClient } from "../generated/prisma/client";
 
@@ -12,8 +11,8 @@ const createPrismaClient = () => {
     user: process.env.DATABASE_USER,
     password: process.env.DATABASE_PASSWORD,
     database: process.env.DATABASE_NAME,
-    port: Number(process.env.DATABASE_PORT), // Aiven uses port 25060
-    ssl: { rejectUnauthorized: false }, // Crucial: Aiven requires SSL
+    port: Number(process.env.DATABASE_PORT),
+    ssl: { rejectUnauthorized: false },
     connectionLimit: 5,
   });
 
