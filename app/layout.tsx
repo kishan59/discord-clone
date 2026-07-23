@@ -30,6 +30,7 @@ export default function RootLayout({
             font.className,
             "min-h-full flex flex-col bg-white dark:bg-[#313338]"
           )}
+          suppressHydrationWarning
         >
             <ThemeProvider 
               attribute="class"
