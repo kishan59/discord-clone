@@ -54,7 +54,6 @@ export const FileUpload = ({ endpoint, value, onChange }: FileUploadProps) => {
                 >
                     <X className="h-4 w-4" />
                 </button>
-
             </div>
         )
     }
