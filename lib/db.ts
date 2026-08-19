@@ -14,6 +14,7 @@ const createPrismaClient = () => {
     port: Number(process.env.DATABASE_PORT),
     ssl: { rejectUnauthorized: false },
     connectionLimit: 5,
+    connectTimeout: 15000,
   });
 
   return new PrismaClient({ adapter });
