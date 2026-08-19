@@ -10,7 +10,7 @@ export const initialProfile = async () => {
         return redirectToSignIn();
     }
 
-    const profile = await db.profile.findUnique({
+    let profile = await db.profile.findUnique({
         where: {
             userId: user.id
         }
@@ -20,14 +20,28 @@ export const initialProfile = async () => {
         return profile;
     }
 
-    const newProfile = await db.profile.create({
-        data: {
-            userId: user.id,
-            name: `${user.firstName} ${user.lastName}`,
-            imageUrl: user.imageUrl,
-            email: user.emailAddresses[0].emailAddress
+    try {
+        const newProfile = await db.profile.create({
+            data: {
+                userId: user.id,
+                name: `${user.firstName} ${user.lastName}`,
+                imageUrl: user.imageUrl,
+                email: user.emailAddresses[0].emailAddress
+            }
+        });
+        
+        return newProfile;
+    } catch (error) {
+        profile = await db.profile.findUnique({
+            where: {
+                userId: user.id
+            }
+        });
+        
+        if (profile) {
+            return profile;
         }
-    });
-
-    return newProfile;
+        
+        throw error;
+    }
 }
