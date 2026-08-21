@@ -2,6 +2,8 @@
 
 A modern, full-stack, real-time communication platform engineered with Next.js App Router, custom WebSockets via Socket.io, WebRTC audio/video rooms powered by LiveKit, and scalable database management with Prisma ORM.
 
+**Live Demo:** [https://discord-clone-nzp7.onrender.com](https://discord-clone-nzp7.onrender.com)
+
 ![Discord Clone Banner](https://img.shields.io/badge/Status-Production%20Ready-emerald?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/Next.js%2015+-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
 ![React](https://img.shields.io/badge/React%2019-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -14,7 +16,7 @@ A modern, full-stack, real-time communication platform engineered with Next.js A
 
 ## 📌 Architectural & Feature Highlights
 
-* **Real-Time Messaging:** Instant bidirectional message broadcasting via Socket.io with fallback to standard HTTP polling.
+* **Real-Time Messaging:** Instant bidirectional message broadcasting via Socket.io with fallback to standard HTTP pooling.
 * **Direct Messaging & Conversations:** 1-on-1 private messaging channels between server members with conversation initialization logic.
 * **WebRTC Voice & Video Rooms:** Real-time low-latency audio/video conference rooms and screen sharing powered by LiveKit.
 * **Server & Channel Management:** Complete CRUD workflows for Servers, Text Channels, Audio Channels, and Video Channels.
@@ -50,7 +52,7 @@ Follow these instructions to run the project locally on your machine.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/discord-clone.git
+git clone https://github.com/kishan59/discord-clone.git
 cd discord-clone
 ```
 
